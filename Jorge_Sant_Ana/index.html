@@ -9,14 +9,43 @@
 </head>
 <body>
     <div id="app">
-        {{mensagem}}
+        {{mensagem}}<br>
+        Valor total: {{valorTotal}}<br>
+        Logado: {{logado}}<br>
+        Hobby: {{hobbies[0]}}<br>
+        Hobby: {{hobbies[1]}}<br>
+        Hobby: {{hobbies[2]}}<br>
+        Nome: {{perfil.nome}}<br>
+        Site: {{perfil.site}}<br>
+        Idade: {{perfil.idade}}<br>
+        Cursos: {{perfil.cursos[0].nome}}<br>
+        Cursos: {{perfil.cursos[0].cargaHoraria}}<br>
+        Cursos: {{perfil.cursos[1].nome}}<br>
+        Cursos: {{perfil.cursos[1].cargaHoraria}}<br>
     </div>
     <script>
         options = {
             el: "#app", // # para selecionar por id e . para selecionar por class
             data: { // variáveis ou atributos reativos
-                mensagem: "Primeiro template controlado pelo Vue"
-            }
+                mensagem: "Primeiro template controlado pelo Vue", // string
+                valorTotal: 150.47, // valor numérico
+                logado: true, // valor booleano
+                hobbies: [
+                    'Dormir',
+                    'Colecionar Video Games Antigos',
+                    'Correr',
+                    'Trilhas'
+                ],
+                perfil: {
+                    nome: "Gabriel Estéfono",
+                    site: "gabrielestefono.com.br",
+                    idade: "26 anos",
+                    cursos: [
+                        {nome: "Laravel", cargaHoraria: "50 Horas"}, 
+                        {nome: "Banco de Dados Relacionais", cargaHoraria: "40 Horas"}
+                    ]
+                }
+            }   
         }
         const vm = new Vue(options); // vm = viewModel
 
