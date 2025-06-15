@@ -20,66 +20,68 @@ import HelloWorld from './components/HelloWorld.vue'
   <RouterView />
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+<style>
+:root {
+  /* Cores */
+
+  --black: #1c232b;
+  --gray: #6c7289;
+  --cream: #f2eae2;
+  --white: #ffffff;
+  --green-500: #3d8168;
+  --green-700: #1a4032;
+
+  /* Tipografia */
+
+  --text-preset-1: 700 32px/1 'Fraunces', serif;
+  --text-preset-1-letter-spacing: 0;
+  --text-preset-2: 700 14px/1.1 'Montserrat', sans-serif;
+  --text-preset-2-letter-spacing: 0;
+  --text-preset-3: 500 14px 1.6 'Montserrat', sans-serif;
+  --text-preset-3-letter-spacing: 0;
+  --text-preset-4: 500 12px 1.2 'Montserrat', sans-serif;
+  --text-preset-4-letter-spacing: 5px;
+  --text-preset-5: 500 13px 1.2 'Montserrat', sans-serif;
+  --text-preset-5-letter-spacing: 0;
+
+  /* Spacing */
+
+  --spacing-50: 4px;
+  --spacing-100: 8px;
+  --spacing-200: 16px;
+  --spacing-300: 24px;
+  --spacing-400: 32px;
+  --spacing-500: 40px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+.text-preset-1 {
+  font: var(--text-preset-1);
+  letter-spacing: var(--text-preset-1-letter-spacing);
+  color: var(--black);
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
+.text-preset-2 {
+  font: var(--text-preset-2);
+  letter-spacing: var(--text-preset-2-letter-spacing);
+  color: var(--black);
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+.text-preset-3 {
+  font: var(--text-preset-3);
+  letter-spacing: var(--text-preset-3-letter-spacing);
+  color: var(--gray);
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+.text-preset-4 {
+  font: var(--text-preset-4);
+  letter-spacing: var(--text-preset-4-letter-spacing);
+  color: var(--gray);
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.text-preset-5 {
+  font: var(--text-preset-5);
+  letter-spacing: var(--text-preset-5-letter-spacing);
+  color: var(--gray);
+  text-decoration: line-through;
 }
 </style>
